@@ -1,0 +1,35 @@
+emulators:
+  rpcs3:
+    name: "PlayStation 3 (RPCS3)"
+    executable: "C:/Emulators/RPCS3/rpcs3.exe"
+    launch_args: ["--no-gui", "{game_path}"]
+    supported_extensions: [".iso", ".pkg", ".bin"]
+    supports_vulkan: true
+
+  ryujinx:
+    name: "Nintendo Switch (Ryujinx)"
+    executable: "C:/Emulators/Ryujinx/Ryujinx.exe"
+    launch_args: ["--fullscreen", "{game_path}"]
+    supported_extensions: [".nsp", ".xci"]
+    supports_vulkan: true
+
+  pcsx2:
+    name: "PlayStation 2 (PCSX2)"
+    executable: "C:/Emulators/PCSX2/pcsx2-qt.exe"
+    launch_args: ["-nogui", "-fullscreen", "{game_path}"]
+    supported_extensions: [".iso", ".bin", ".chd"]
+    supports_vulkan: true
+
+  dolphin:
+    name: "GameCube / Wii (Dolphin)"
+    executable: "C:/Emulators/Dolphin/Dolphin.exe"
+    launch_args: ["-b", "-e", "{game_path}"]
+    supported_extensions: [".iso", ".gcm", ".rvz"]
+    supports_vulkan: true
+
+  retroarch:
+    name: "RetroArch (Universal)"
+    executable: "C:/Emulators/RetroArch/retroarch.exe"
+    launch_args: ["-f", "-L", "{core_path}", "{game_path}"]
+    supported_extensions: [".nes", ".sfc", ".gba", ".md"]
+    supports_vulkan: true
